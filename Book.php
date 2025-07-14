@@ -4,6 +4,9 @@ require_once 'LibraryItem.php';
 require_once 'Borrowable.php';
 
 class Book extends LibraryItem implements Borrowable {
+    public function getIsbn() {
+        return $this->isbn;
+    }
     private $author;
     private $publisher;
     private $publicationYear;

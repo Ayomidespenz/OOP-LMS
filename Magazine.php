@@ -1,3 +1,6 @@
+    public function getIsbn() {
+        return $this->isbn;
+    }
 <?php
 
 require_once 'LibraryItem.php';
@@ -41,7 +44,7 @@ class Magazine extends LibraryItem implements Borrowable {
         return [
             'type' => 'Magazine',
             'title' => $this->title,
-            'isbn' => $this->isbn,
+          
             'issueNumber' => $this->issueNumber,
             'editor' => $this->editor,
             'publicationDate' => $this->publicationDate,

@@ -7,7 +7,7 @@ abstract class LibraryItem {
     protected $totalCopies;
     protected $dateAdded;
 
-    public function __construct($title, $isbn, $totalCopies = 1) {
+    public function __construct($title, $isbn = null, $totalCopies = 1) {
         $this->title = $title;
         $this->isbn = $isbn;
         $this->totalCopies = $totalCopies;
@@ -18,9 +18,6 @@ abstract class LibraryItem {
     // Getters
     public function getTitle() {
         return $this->title;
-    }
-    public function getIsbn() {
-        return $this->isbn;
     }
     public function getAvailableCopies() {
         return $this->availableCopies;
@@ -34,9 +31,6 @@ abstract class LibraryItem {
     // Setters
     public function setTitle($title) {
         $this->title = $title;
-    }
-    public function setIsbn($isbn) {
-        $this->isbn = $isbn;
     }
     public function setTotalCopies($totalCopies) {
         if ($totalCopies >= 0) {

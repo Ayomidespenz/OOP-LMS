@@ -1,6 +1,9 @@
 <?php
 
 class Member {
+    public function getId() {
+        return $this->getMemberId();
+    }
     private $memberId;
     private $name;
     private $email;
